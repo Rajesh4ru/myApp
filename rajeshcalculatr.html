@@ -1,0 +1,177 @@
+<html>
+<head>
+<style>
+*{
+padding:5px;
+}
+button{
+background-color:black;
+height:60px;
+width:60px; 
+border:none; 
+border-radius:20px;
+font-family:arial;
+font-size:30px;
+color:white;
+}
+button:hover
+{
+background-color:black;
+color:white;
+}
+
+
+</style>
+</head>
+<body>
+<center>
+<table  border="2" style="border-radius:15px; background-color:redish ; border-color:black;">
+<td>
+<center><h2 style="color:black;">CALCULATOR</h2></center>
+<p><input type="text" name="abc" id="monitor" style="height:60px; width:250px; border:2px solid #323232; border-radius:12px; font-size:19px;"><br>
+</p>
+<P>
+<button onclick="one()">1</button>
+<button onclick="two()">2</button>
+<button onclick="three()">3</button>
+<button onclick="plus()" style="background-color:red">+</button></P>
+<p>
+<button onclick="four()">4</button>
+<button onclick="five()">5</button>
+<button onclick="six()">6</button>
+<button onclick="diff()"style="background-color:red">-</button></p>
+<p>
+<button onclick="seven()">7</button>
+<button onclick="eight()">8</button>
+<button onclick="nine()">9</button>
+<button onclick="mul()"style="background-color:red">*</button></p>
+<p>
+<button onclick="zero()"style=>0</button>
+<button onclick="div()"style="background-color:red">/</button>
+  <button onclick="decimal()"style="background-color:red">.</button>
+<button onclick="equal()"style="background-color:red">=</button>
+</p>
+
+
+
+</td>
+</table></center>
+<script>
+var a,b,c, p=0,d=0,m=0,di=0,mu=0;
+
+function zero()
+{
+a=document.getElementById("monitor").value;
+document.getElementById("monitor").value=a+"0";
+}
+function one()
+{
+ a=document.getElementById("monitor").value;
+document.getElementById("monitor").value=a+"1";
+}
+function two()
+{
+ a=document.getElementById("monitor").value;
+ document.getElementById("monitor").value=a+"2";
+}
+function decimal()
+{
+ a=document.getElementById("monitor").value;
+ document.getElementById("monitor").value=a+".";
+}
+function three()
+{
+a=document.getElementById("monitor").value;
+document.getElementById("monitor").value=a+"3";
+}
+function four()
+{
+a=document.getElementById("monitor").value;
+document.getElementById("monitor").value=a+"4";
+}
+function five()
+{
+a=document.getElementById("monitor").value;
+document.getElementById("monitor").value=a+"5";
+}
+function six()
+{
+a=document.getElementById("monitor").value;
+document.getElementById("monitor").value=a+"6";
+}
+function seven()
+{
+a=document.getElementById("monitor").value;
+document.getElementById("monitor").value=a+"7";
+}
+function eight()
+{
+a=document.getElementById("monitor").value;
+document.getElementById("monitor").value=a+"8";
+}
+function nine()
+{
+a=document.getElementById("monitor").value;
+document.getElementById("monitor").value=a+"9";
+}
+function plus()
+{p=1;
+b=parseFloat(document.getElementById("monitor").value);
+document.getElementById("monitor").value="";
+d=0,m=0,di=0,mu=0;
+}
+function diff()
+{d=1;
+b=parseFloat(document.getElementById("monitor").value);
+document.getElementById("monitor").value="";
+p=0,m=0,di=0,mu=0;
+}
+function mul()
+{m=1;
+b=parseFloat(document.getElementById("monitor").value);
+document.getElementById("monitor").value="";
+p=0,d=0,di=0,mu=0;
+}
+function div()
+{di=1;
+b=parseFloat(document.getElementById("monitor").value);
+document.getElementById("monitor").value="";
+p=0,d=0,m=0,mu=0;
+}
+function mud()
+{mu=1;
+b=parseFloat(document.getElementById("monitor").value);
+document.getElementById("monitor").value="";
+p=0,d=0,m=0,di=0;
+}
+function equal()
+{
+if(p==1)
+{
+a=parseFloat(document.getElementById("monitor").value);
+document.getElementById("monitor").value=b+a;
+}
+if(d==1)
+{
+a=parseFloat(document.getElementById("monitor").value);
+document.getElementById("monitor").value=b-a;
+}
+if(m==1)
+{
+a=parseFloat(document.getElementById("monitor").value);
+document.getElementById("monitor").value=b*a;
+}
+if(di==1)
+{
+a=parseFloat(document.getElementById("monitor").value);
+document.getElementById("monitor").value=b/a;
+}
+if(mu==1) 
+{
+a=parseFloat(document.getElementById("monitor").value);
+document.getElementById("monitor").value=b%a;
+}
+}
+</script>
+</body>
+</html>
